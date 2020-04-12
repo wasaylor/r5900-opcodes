@@ -1,0 +1,116 @@
+# format of a line in this file:
+# <instruction name> <args> <opcode> <codec> <MIPS version>
+#
+# <opcode> is given by specifying one or more range/value pairs:
+# hi..lo=<value> or bit=<value>
+#
+# <value> may be specified in hex, with '0x', binary with '0b', or as a decimal integer
+#
+# <args> is one of rs, rt, rd, immediate, offset, sa, etc which all occupy..
+# ..a standard range of bits
+#
+
+add     31..26=0        rs rt rd 10..6=0 5..0=0b100000 r I
+addi    31..26=0b001000 rs rt immediate i I
+addiu   31..26=0b001001 rs rt immediate i I
+addu    31..26=0        rs rt rd 10..6=0 5..0=0b100001 r I
+and     31..26=0        rs rt rd 10..6=0 5..0=0b100100 r I
+andi    31..26=0b001100 rs rt offset i I
+beq     31..26=0b000100 rs rt offset i I
+beql    31..26=0b010100 rs rt offset i I
+bgez    31..26=1        rs 20..16=0b00001 offset i I
+bgezal  31..26=1        rs 20..16=0b10001 offset i I
+bgezall 31..26=1        rs 20..16=0b10011 offset i I
+bgezl   31..26=1        rs 20..16=0b00011 offset i II
+bgtz    31..26=0b000111 rs 20..16=0 offset i I
+bgtzl   31..26=0b010111 rs 20..16=0 offset i II
+blez    31..26=0b000110 rs 20..16=0 offset i I
+blezl   31..26=0b010110 rs 20..16=0 offset i I
+bltz    31..26=1        rs 20..16=0 offset i I
+bltzal  31..26=1        rs 20..16=0b10000 offset i I
+bltzall 31..26=1        rs 20..16=0b10010 offset i II
+bltzl   31..26=1        rs 20..16=0b00010 offset i II
+bne     31..26=0b000101 rs rt offset i I
+bnel    31..26=0b010101 rs rt offset i II
+break   31..26=0        code20 5..0=0b001101 r I
+dadd    31..26=0        rs rt rd 10..6=0 5..0=0b101100 r III
+daddi   31..26=0b011000 rs rt immediate i III
+daddiu  31..26=0b011001 rs rt immediate i III
+daddu   31..26=0        rs rt rd 10..6=0 5..0=0b101101 r III
+div     31..26=0        rs rt 15..11=0 10..6=0 5..0=0b011010 r I
+divu    31..26=0        rs rt 15..11=0 10..6=0 5..0=0b011011 r I
+dsll    31..26=0        25..21=0 rt rd sa 5..0=0b111000 r III
+dsll32  31..26=0        25..21=0 rt rd sa 5..0=0b111100 r III
+dsllv   31..26=0        rs rt rd 10..6=0 5..0=0b010100 r III
+dsra    31..26=0        25..21=0 rt rd sa 5..0=0b111011 r III
+dsra32  31..26=0        25..21=0 rt rd sa 5..0=0b111111 r III
+dsrav   31..26=0        rs rt rd 10..6=0 5..0=0b010111 r III
+dsrl    31..26=0        25..21=0 rt rd sa 5..0=0b111010 r III
+dsrl32  31..26=0        25..21=0 rt rd sa 5..0=0b111110 r III
+dsrlv   31..26=0        rs rt rd 10..6=0 5..0=0b010110 r III
+dsub    31..26=0        rs rt rd 10..6=0 5..0=0b101110 r III
+dsubu   31..26=0        rs rt rd 10..6=0 5..0=0b101111 r III
+j       31..26=0b000010 instr_index j I
+jal     31..26=0b000011 instr_index j I
+jalr    31..26=0        rs 20..16=0 rd 10..6=0 5..0=0b001001 r I
+jr      31..26=0        rs 20..16=0 15..11=0 10..6=0 5..0=0b001000 r I
+lb      31..26=0b100000 base rt offset i I
+lbu     31..26=0b100100 base rt offset i I
+ld      31..26=0b110111 base rt offset i III
+ldl     31..26=0b011010 base rt offset i III
+ldr     31..26=0b011011 base rt offset i III
+lh      31..26=0b100001 base rt offset i I
+lhu     31..26=0b100101 base rt offset i I
+lui     31..26=0b001111 base rt immediate i I
+lw      31..26=0b100011 base rt offset i I
+lwl     31..26=0b100010 base rt offset i I
+lwr     31..26=0b100110 base rt offset i I
+lhu     31..26=0b100111 base rt offset i I
+mfhi    31..26=0        25..21=0 20..16=0 rd 10..6=0 5..0=0b010000 r I
+mfhi    31..26=0        25..21=0 20..16=0 rd 10..6=0 5..0=0b010010 r I
+movn    31..26=0        rs rt rd 10..6=0 5..0=0b001011 r IV
+movz    31..26=0        rs rt rd 10..6=0 5..0=0b001010 r IV
+mthi    31..26=0        rs 20..16=0 15..11=0 10..6=0 5..0=0b010001 r I
+mtlo    31..26=0        rs 20..16=0 15..11=0 10..6=0 5..0=0b010011 r I
+mult    31..26=0        rs rt 15..6=0 5..0=0b011000 r I
+multu   31..26=0        rs rt 15..6=0 5..0=0b011001 r I
+nor     31..26=0        rs rt rd 10..6=0 5..0=0b100111 r I
+or      31..26=0        rs rt rd 10..6=0 5..0=0b100101 r I
+ori     31..26=0b001101 rs rt immediate i I
+pref    31..26=0b110011 base hint offset i IV
+sb      31..26=0b101000 base rt offset i I
+sd      31..26=0b111111 base rt offset i III
+sdl     31..26=0b101100 base rt offset i III
+sdr     31..26=0b101101 base rt offset i III
+sh      31..26=0b101001 base rt offset i I
+sll     31..26=0        25..21=0 rt rd sa 5..0=0 r I
+sllv    31..26=0        rs rt rd 10..6=0 5..0=0b000100 r I
+slt     31..26=0        rs rt rd 10..6=0 5..0=0b101010 r I
+slti    31..26=0b001010 rs rt immediate i I
+sltiu   31..26=0b001011 rs rt immediate i I
+sltu    31..26=0        rs rt rd 10..6=0 5..0=0b101011 r I
+sra     31..26=0        25..21=0 rt rd sa 5..0=0b000011 r I
+srav    31..26=0        rs rt rd 10..6=0 5..0=0b000111 r I
+srl     31..26=0        25..21=0 rt rd sa 5..0=0b000010 r I
+srlv    31..26=0        rs rt rd 10..6=0 5..0=0b000110 r I
+sub     31..26=0        rs rt rd 10..6=0 5..0=0b100010 r I
+subu    31..26=0        rs rt rd 10..6=0 5..0=0b100011 r I
+sw      31..26=0b101011 base rt offset i I
+swl     31..26=0b101010 base rt offset i I
+swr     31..26=0b101110 base rt offset i I
+sync    31..26=0        25..21=0 20..16=0 15..11=0 stype 5..0=0b001111 r II
+syscall 31..26=0        code20 5..0=0b001100 r I
+teq     31..26=0        rs rt code10 5..0=0b110100 r II
+teqi    31..26=1        rs 20..16=0b01100 immediate i II
+tge     31..26=0        rs rt code10 5..0=0b110000 r II
+tgei    31..26=1        rs 20..16=0b01000 immediate i II
+tgeiu   31..26=1        rs 20..16=0b01001 immediate i II
+tgeu    31..26=0        rs rt code10 5..0=0b110001 r II
+tlt     31..26=0        rs rt code10 5..0=0b110010 r II
+tlti    31..26=1        rs 20..16=0b01010 immediate i II
+tltiu   31..26=1        rs 20..16=0b01011 immediate i II
+tltu    31..26=0        rs rt code10 5..0=0b110011 r II
+tne     31..26=0        rs rt code10 5..0=0b110110 r II
+tnei    31..26=1        rs 20..16=0b01110 immediate i II
+xor     31..26=0        rs rt rd 10..6=0 5..0=0b100110 r I
+xori    31..26=0b001110 rs rt immediate i I
