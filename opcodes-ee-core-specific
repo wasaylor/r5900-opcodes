@@ -1,107 +1,107 @@
-div1    31..26=28       rs rt 15..11=0 10..6=0 5..0=0b011010 r EE
-divu1   31..26=28       rs rt 15..11=0 10..6=0 5..0=0b011011 r EE
-lq      31..26=0b011110 base rt offset i MMI
-madd    31..26=28       rs rt rd 10..6=0 5..0=0b000000 r EE
-madd1   31..26=28       rs rt rd 10..6=0 5..0=0b100000 r EE
-maddu   31..26=28       rs rt rd 10..6=0 5..0=0b000001 r EE
-maddu1  31..26=28       rs rt rd 10..6=0 5..0=0b100001 r EE
-mfhi1   31..26=28       25..21=0 20..16=0 rd 10..6=0 5..0=0b010000 r EE
-mflo1   31..26=28       25..21=0 20..16=0 rd 10..6=0 5..0=0b010010 r EE
-mfsa    31..26=0        25..21=0 20..16=0 rd 10..6=0 5..0=0b101000 r EE
-mthi1   31..26=28       rs 20..16=0 15..11=0 10..6=0 5..0=0b010001 r EE
-mtlo1   31..26=28       rs 20..16=0 15..11=0 10..6=0 5..0=0b010011 r EE
-mtsa    31..26=0        rs 20..16=0 15..11=0 10..6=0 5..0=0b101001 r EE
-mtsab   31..26=1        rs 20..16=0b11000 immediate i EE
-mtsah   31..26=1        rs 20..16=0b11001 immediate i EE
-mult    31..26=0        rs rt rd 10..6=0 5..0=0b011000 r EE
-mult1   31..26=28       rs rt rd 10..6=0 5..0=0b011000 r EE
-multu   31..26=0        rs rt rd 10..6=0 5..0=0b011001 r EE
-multu1  31..26=28       rs rt rd 10..6=0 5..0=0b011001 r EE
-pabsh   31..26=28       25..21=0 rt rd 10..6=0b00101 5..0=40 r MMI
-pabsw   31..26=28       25..21=0 rt rd 10..6=0b00001 5..0=40 r MMI
-paddb   31..26=28       rs rt rd 10..6=0b01000 5..0=8 r MMI
-paddh   31..26=28       rs rt rd 10..6=0b00100 5..0=8 r MMI
-paddsb  31..26=28       rs rt rd 10..6=0b11000 5..0=8 r MMI
-paddsh  31..26=28       rs rt rd 10..6=0b10100 5..0=8 r MMI
-paddsw  31..26=28       rs rt rd 10..6=0b10000 5..0=8 r MMI
-paddub  31..26=28       rs rt rd 10..6=0b11000 5..0=40 r MMI
-padduh  31..26=28       rs rt rd 10..6=0b10100 5..0=40 r MMI
-padduw  31..26=28       rs rt rd 10..6=0b10000 5..0=40 r MMI
-paddw   31..26=28       rs rt rd 10..6=0b00000 5..0=8 r MMI
-padsbh  31..26=28       rs rt rd 10..6=0b00100 5..0=40 r MMI
-pand    31..26=28       rs rt rd 10..6=0b10010 5..0=9 r MMI
-pceqb   31..26=28       rs rt rd 10..6=0b01010 5..0=40 r MMI
-pceqw   31..26=28       rs rt rd 10..6=0b00010 5..0=40 r MMI
-pcgtb   31..26=28       rs rt rd 10..6=0b01010 5..0=8 r MMI
-pcgth   31..26=28       rs rt rd 10..6=0b00110 5..0=8 r MMI
-pcgtw   31..26=28       rs rt rd 10..6=0b00010 5..0=8 r MMI
-pcpyh   31..26=28       25..21=0 rt rd 10..6=0b11011 5..0=41 r MMI
-pcpyld  31..26=28       rs rt rd 10..6=0b01110 5..0=9 r MMI
-pcpyud  31..26=28       rs rt rd 10..6=0b01110 5..0=41 r MMI
-pdivbw  31..26=28       rs rt 15..11=0 10..6=0b11101 5..0=9 r MMI
-pdivuw  31..26=28       rs rt 15..11=0 10..6=0b01101 5..0=41 r MMI
-pdivw   31..26=28       rs rt 15..11=0 10..6=0b01101 5..0=9 r MMI
-pexch   31..26=28       25..21=0 rt rd 10..6=0b11010 5..0=41 r MMI
-pexcw   31..26=28       25..21=0 rt rd 10..6=0b11110 5..0=41 r MMI
-pexeh   31..26=28       25..21=0 rt rd 10..6=0b11010 5..0=9 r MMI
-pexew   31..26=28       25..21=0 rt rd 10..6=0b11110 5..0=9 r MMI
-pext5   31..26=28       25..21=0 rt rd 10..6=0b11110 5..0=8 r MMI
-pextlb  31..26=28       rs rt rd 10..6=0b11010 5..0=8 r MMI
-pextlh  31..26=28       rs rt rd 10..6=0b10110 5..0=8 r MMI
-pextlw  31..26=28       rs rt rd 10..6=0b10010 5..0=8 r MMI
-pextub  31..26=28       rs rt rd 10..6=0b11010 5..0=9 r MMI
-pextuh  31..26=28       rs rt rd 10..6=0b10110 5..0=9 r MMI
-pextuw  31..26=28       rs rt rd 10..6=0b10010 5..0=9 r MMI
-phmadh  31..26=28       rs rt rd 10..6=0b10001 5..0=9 r MMI
-phmsbh  31..26=28       rs rt rd 10..6=0b10101 5..0=9 r MMI
-pinteh  31..26=28       rs rt rd 10..6=0b01010 5..0=41 r MMI
-pinth   31..26=28       rs rt rd 10..6=0b01010 5..0=9 r MMI
-plzcw   31..26=28       rs 20..16=0 rd 10..6=0 5..0=0b000100 r EE
-pmaddh  31..26=28       rs rt rd 10..6=0b10000 5..0=9 r MMI
-pmadduw 31..26=28       rs rt rd 10..6=0b00000 5..0=41 r MMI
-pmaddw  31..26=28       rs rt rd 10..6=0b00000 5..0=9 r MMI
-pmaxh   31..26=28       rs rt rd 10..6=0b00111 5..0=8 r MMI
-pmaxw   31..26=28       rs rt rd 10..6=0b00011 5..0=8 r MMI
-pmfhi   31..26=28       25..21=0 20..16=0 rd 10..6=0b01000 5..0=9 r MMI
-pmfhl   31..26=28       25..21=0 20..16=0 rd fmt 5..0=0b110000 r MMI
-pmflo   31..26=28       25..21=0 20..16=0 rd 10..6=0b01001 5..0=9 r MMI
-pminh   31..26=28       rs rt rd 10..6=0b00111 5..0=40 r MMI
-pminw   31..26=28       rs rt rd 10..6=0b00011 5..0=40 r MMI
-pmsubh  31..26=28       rs rt rd 10..6=0b10100 5..0=9 r MMI
-pmsubw  31..26=28       rs rt rd 10..6=0b00100 5..0=9 r MMI
-pmthi   31..26=28       rs 20..16=0 15..11=0 10..6=0b01000 5..0=41 r MMI
-pmthl   31..26=28       rs 20..16=0 15..11=0 fmt 5..0=0b110001 r MMI
-pmtlo   31..26=28       rs 20..16=0 15..11=0 10..6=0b01001 5..0=41 r MMI
-pmulth  31..26=28       rs rt rd 10..6=0b11100 5..0=9 r MMI
-pmultuw 31..26=28       rs rt rd 10..6=0b01100 5..0=41 r MMI
-pmultw  31..26=28       rs rt rd 10..6=0b01100 5..0=9 r MMI
-pnor    31..26=28       rs rt rd 10..6=0b10011 5..0=41 r MMI
-por     31..26=28       rs rt rd 10..6=0b10010 5..0=41 r MMI
-ppac5   31..26=28       25..21=0 rt rd 10..6=0b11111 5..0=8 r MMI
-ppacb   31..26=28       rs rt rd 10..6=0b11011 5..0=8 r MMI
-ppach   31..26=28       rs rt rd 10..6=0b10111 5..0=8 r MMI
-ppacw   31..26=28       rs rt rd 10..6=0b10011 5..0=8 r MMI
-prevh   31..26=28       25..21=0 rt rd 10..6=0b11011 5..0=9 r MMI
-prot3w  31..26=28       25..21=0 rt rd 10..6=0b11111 5..0=9 r MMI
-psllh   31..26=28       25..21=0 rt rd sa 5..0=0b110100 r MMI
-psllvw  31..26=28       rs rt rd 10..6=0b00010 5..0=9 r MMI
-psllw   31..26=28       25..21=0 rt rd sa 5..0=0b111100 r MMI
-psrah   31..26=28       25..21=0 rt rd sa 5..0=0b110111 r MMI
-psravw  31..26=28       rs rt rd 10..6=0b00011 5..0=41 r MMI
-psraw   31..26=28       25..21=0 rt rd sa 5..0=0b111111 r MMI
-psrlh   31..26=28       25..21=0 rt rd sa 5..0=0b110110 r MMI
-psrlvw  31..26=28       rs rt rd 10..6=0b00011 5..0=9 r MMI
-psrlw   31..26=28       25..21=0 rt rd sa 5..0=0b111110 r MMI
-psubb   31..26=28       rs rt rd 10..6=0b01001 5..0=8 r MMI
-psubh   31..26=28       rs rt rd 10..6=0b00101 5..0=8 r MMI
-psubsb  31..26=28       rs rt rd 10..6=0b11001 5..0=8 r MMI
-psubsh  31..26=28       rs rt rd 10..6=0b10101 5..0=8 r MMI
-psubsw  31..26=28       rs rt rd 10..6=0b10001 5..0=8 r MMI
-psubub  31..26=28       rs rt rd 10..6=0b11001 5..0=40 r MMI
-psubuh  31..26=28       rs rt rd 10..6=0b10101 5..0=40 r MMI
-psubuw  31..26=28       rs rt rd 10..6=0b10001 5..0=40 r MMI
-psubw   31..26=28       rs rt rd 10..6=0b00001 5..0=8 r MMI
-pxor    31..26=28       rs rt rd 10..6=0b10011 5..0=9 r MMI
-qfsrv   31..26=28       rs rt rd 10..6=0b11011 5..0=40 r MMI
-sq      31..26=0b011111 base rt offset i MMI
+div1    31..26=28       rs rt 15..11=0 10..6=0 5..0=0b011010
+divu1   31..26=28       rs rt 15..11=0 10..6=0 5..0=0b011011
+lq      31..26=0b011110 base rt offset
+madd    31..26=28       rs rt rd 10..6=0 5..0=0b000000
+madd1   31..26=28       rs rt rd 10..6=0 5..0=0b100000
+maddu   31..26=28       rs rt rd 10..6=0 5..0=0b000001
+maddu1  31..26=28       rs rt rd 10..6=0 5..0=0b100001
+mfhi1   31..26=28       25..21=0 20..16=0 rd 10..6=0 5..0=0b010000
+mflo1   31..26=28       25..21=0 20..16=0 rd 10..6=0 5..0=0b010010
+mfsa    31..26=0        25..21=0 20..16=0 rd 10..6=0 5..0=0b101000
+mthi1   31..26=28       rs 20..16=0 15..11=0 10..6=0 5..0=0b010001
+mtlo1   31..26=28       rs 20..16=0 15..11=0 10..6=0 5..0=0b010011
+mtsa    31..26=0        rs 20..16=0 15..11=0 10..6=0 5..0=0b101001
+mtsab   31..26=1        rs 20..16=0b11000 immediate
+mtsah   31..26=1        rs 20..16=0b11001 immediate
+mult    31..26=0        rs rt rd 10..6=0 5..0=0b011000
+mult1   31..26=28       rs rt rd 10..6=0 5..0=0b011000
+multu   31..26=0        rs rt rd 10..6=0 5..0=0b011001
+multu1  31..26=28       rs rt rd 10..6=0 5..0=0b011001
+pabsh   31..26=28       25..21=0 rt rd 10..6=0b00101 5..0=40
+pabsw   31..26=28       25..21=0 rt rd 10..6=0b00001 5..0=40
+paddb   31..26=28       rs rt rd 10..6=0b01000 5..0=8
+paddh   31..26=28       rs rt rd 10..6=0b00100 5..0=8
+paddsb  31..26=28       rs rt rd 10..6=0b11000 5..0=8
+paddsh  31..26=28       rs rt rd 10..6=0b10100 5..0=8
+paddsw  31..26=28       rs rt rd 10..6=0b10000 5..0=8
+paddub  31..26=28       rs rt rd 10..6=0b11000 5..0=40
+padduh  31..26=28       rs rt rd 10..6=0b10100 5..0=40
+padduw  31..26=28       rs rt rd 10..6=0b10000 5..0=40
+paddw   31..26=28       rs rt rd 10..6=0b00000 5..0=8
+padsbh  31..26=28       rs rt rd 10..6=0b00100 5..0=40
+pand    31..26=28       rs rt rd 10..6=0b10010 5..0=9
+pceqb   31..26=28       rs rt rd 10..6=0b01010 5..0=40
+pceqw   31..26=28       rs rt rd 10..6=0b00010 5..0=40
+pcgtb   31..26=28       rs rt rd 10..6=0b01010 5..0=8
+pcgth   31..26=28       rs rt rd 10..6=0b00110 5..0=8
+pcgtw   31..26=28       rs rt rd 10..6=0b00010 5..0=8
+pcpyh   31..26=28       25..21=0 rt rd 10..6=0b11011 5..0=41
+pcpyld  31..26=28       rs rt rd 10..6=0b01110 5..0=9
+pcpyud  31..26=28       rs rt rd 10..6=0b01110 5..0=41
+pdivbw  31..26=28       rs rt 15..11=0 10..6=0b11101 5..0=9
+pdivuw  31..26=28       rs rt 15..11=0 10..6=0b01101 5..0=41
+pdivw   31..26=28       rs rt 15..11=0 10..6=0b01101 5..0=9
+pexch   31..26=28       25..21=0 rt rd 10..6=0b11010 5..0=41
+pexcw   31..26=28       25..21=0 rt rd 10..6=0b11110 5..0=41
+pexeh   31..26=28       25..21=0 rt rd 10..6=0b11010 5..0=9
+pexew   31..26=28       25..21=0 rt rd 10..6=0b11110 5..0=9
+pext5   31..26=28       25..21=0 rt rd 10..6=0b11110 5..0=8
+pextlb  31..26=28       rs rt rd 10..6=0b11010 5..0=8
+pextlh  31..26=28       rs rt rd 10..6=0b10110 5..0=8
+pextlw  31..26=28       rs rt rd 10..6=0b10010 5..0=8
+pextub  31..26=28       rs rt rd 10..6=0b11010 5..0=9
+pextuh  31..26=28       rs rt rd 10..6=0b10110 5..0=9
+pextuw  31..26=28       rs rt rd 10..6=0b10010 5..0=9
+phmadh  31..26=28       rs rt rd 10..6=0b10001 5..0=9
+phmsbh  31..26=28       rs rt rd 10..6=0b10101 5..0=9
+pinteh  31..26=28       rs rt rd 10..6=0b01010 5..0=41
+pinth   31..26=28       rs rt rd 10..6=0b01010 5..0=9
+plzcw   31..26=28       rs 20..16=0 rd 10..6=0 5..0=0b000100
+pmaddh  31..26=28       rs rt rd 10..6=0b10000 5..0=9
+pmadduw 31..26=28       rs rt rd 10..6=0b00000 5..0=41
+pmaddw  31..26=28       rs rt rd 10..6=0b00000 5..0=9
+pmaxh   31..26=28       rs rt rd 10..6=0b00111 5..0=8
+pmaxw   31..26=28       rs rt rd 10..6=0b00011 5..0=8
+pmfhi   31..26=28       25..21=0 20..16=0 rd 10..6=0b01000 5..0=9
+pmfhl   31..26=28       25..21=0 20..16=0 rd fmt 5..0=0b110000
+pmflo   31..26=28       25..21=0 20..16=0 rd 10..6=0b01001 5..0=9
+pminh   31..26=28       rs rt rd 10..6=0b00111 5..0=40
+pminw   31..26=28       rs rt rd 10..6=0b00011 5..0=40
+pmsubh  31..26=28       rs rt rd 10..6=0b10100 5..0=9
+pmsubw  31..26=28       rs rt rd 10..6=0b00100 5..0=9
+pmthi   31..26=28       rs 20..16=0 15..11=0 10..6=0b01000 5..0=41
+pmthl   31..26=28       rs 20..16=0 15..11=0 fmt 5..0=0b110001
+pmtlo   31..26=28       rs 20..16=0 15..11=0 10..6=0b01001 5..0=41
+pmulth  31..26=28       rs rt rd 10..6=0b11100 5..0=9
+pmultuw 31..26=28       rs rt rd 10..6=0b01100 5..0=41
+pmultw  31..26=28       rs rt rd 10..6=0b01100 5..0=9
+pnor    31..26=28       rs rt rd 10..6=0b10011 5..0=41
+por     31..26=28       rs rt rd 10..6=0b10010 5..0=41
+ppac5   31..26=28       25..21=0 rt rd 10..6=0b11111 5..0=8
+ppacb   31..26=28       rs rt rd 10..6=0b11011 5..0=8
+ppach   31..26=28       rs rt rd 10..6=0b10111 5..0=8
+ppacw   31..26=28       rs rt rd 10..6=0b10011 5..0=8
+prevh   31..26=28       25..21=0 rt rd 10..6=0b11011 5..0=9
+prot3w  31..26=28       25..21=0 rt rd 10..6=0b11111 5..0=9
+psllh   31..26=28       25..21=0 rt rd sa 5..0=0b110100
+psllvw  31..26=28       rs rt rd 10..6=0b00010 5..0=9
+psllw   31..26=28       25..21=0 rt rd sa 5..0=0b111100
+psrah   31..26=28       25..21=0 rt rd sa 5..0=0b110111
+psravw  31..26=28       rs rt rd 10..6=0b00011 5..0=41
+psraw   31..26=28       25..21=0 rt rd sa 5..0=0b111111
+psrlh   31..26=28       25..21=0 rt rd sa 5..0=0b110110
+psrlvw  31..26=28       rs rt rd 10..6=0b00011 5..0=9
+psrlw   31..26=28       25..21=0 rt rd sa 5..0=0b111110
+psubb   31..26=28       rs rt rd 10..6=0b01001 5..0=8
+psubh   31..26=28       rs rt rd 10..6=0b00101 5..0=8
+psubsb  31..26=28       rs rt rd 10..6=0b11001 5..0=8
+psubsh  31..26=28       rs rt rd 10..6=0b10101 5..0=8
+psubsw  31..26=28       rs rt rd 10..6=0b10001 5..0=8
+psubub  31..26=28       rs rt rd 10..6=0b11001 5..0=40
+psubuh  31..26=28       rs rt rd 10..6=0b10101 5..0=40
+psubuw  31..26=28       rs rt rd 10..6=0b10001 5..0=40
+psubw   31..26=28       rs rt rd 10..6=0b00001 5..0=8
+pxor    31..26=28       rs rt rd 10..6=0b10011 5..0=9
+qfsrv   31..26=28       rs rt rd 10..6=0b11011 5..0=40
+sq      31..26=0b011111 base rt offset
 
